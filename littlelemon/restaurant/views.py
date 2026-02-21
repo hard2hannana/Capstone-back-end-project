@@ -25,4 +25,7 @@ class UserViewSet(viewsets.ModelViewSet):
    queryset = User.objects.all()
    serializer_class = UserSerializer
    permission_classes = [IsAuthenticated] 
+
+def index(request):
+    return render(request, 'index.html', {})
     
